@@ -8,11 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity {
+public class Main2Activity extends AppCompatActivity {
 
     private EditText a;
     private EditText b;
     private EditText c;
+    private EditText d;
     private EditText resultat;
     private Button button;
 
@@ -21,20 +22,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
 
-        Button btn = (Button) findViewById(R.id.btn);
-
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Main2Activity.class));
-            }
-        });
 
         a = findViewById(R.id.aTextView);
         b = findViewById(R.id.bTextView);
         c = findViewById(R.id.cTextView);
+        d = findViewById(R.id.dTextView);
         resultat = findViewById(R.id.resultatTextView);
         button = findViewById(R.id.button);
 
@@ -49,9 +43,11 @@ public class MainActivity extends AppCompatActivity {
                 double bDoubleVal = Double.parseDouble(bStringVal);
                 String cStringVal  = (c.getText().toString());
                 double cDoubleVal = Double.parseDouble(cStringVal);
+                String dStringVal  = (d.getText().toString());
+                double dDoubleVal = Double.parseDouble(dStringVal);
 
                 // TODO  læg dem sammen
-                double resultatValue = Calculator.Breakeven(aDoubleVal,bDoubleVal,cDoubleVal);
+                double resultatValue = Calculator.ProfitCalc(aDoubleVal,bDoubleVal,cDoubleVal,dDoubleVal);
                 Log.d("hajmund", "Resultatet er " + resultatValue);
 
                 // TODO  vis det i resultat

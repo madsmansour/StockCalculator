@@ -9,4 +9,10 @@ public class Calculator {
         return resultat;
 
     }
+
+    public static double ProfitCalc(double a, double b, double c, double d){
+        double resultat2 = ((a * b) * d + c) / a;
+
+        return resultat2;
+    }
 }
