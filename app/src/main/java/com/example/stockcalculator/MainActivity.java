@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // your handler code here
-                // TODO træk a og b ud fra edittext
 
                 String aStringVal  = (a.getText().toString());
                 double aDoubleVal = Double.parseDouble(aStringVal);
@@ -50,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 String cStringVal  = (c.getText().toString());
                 double cDoubleVal = Double.parseDouble(cStringVal);
 
-                // TODO  læg dem sammen
+                // TODO  sætter tallene i metoden og regner ud
                 double resultatValue = Calculator.Breakeven(aDoubleVal,bDoubleVal,cDoubleVal);
                 Log.d("hajmund", "Resultatet er " + resultatValue);
 
